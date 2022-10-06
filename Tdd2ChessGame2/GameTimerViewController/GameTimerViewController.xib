@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameTimerViewController" customModule="Tdd2ChessGame2" customModuleProvider="target">
+            <connections>
+                <outlet property="labelErrorMessage" destination="xkF-l5-aCN" id="XDo-NV-yTQ"/>
+                <outlet property="textFieldGameTimer" destination="WB2-Vl-UxS" id="HSt-HK-QMH"/>
+                <outlet property="view" destination="Fli-RC-usI" id="hN5-yD-0W7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Fli-RC-usI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WB2-Vl-UxS">
+                    <rect key="frame" x="16" y="60" width="382" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkF-l5-aCN" userLabel="ValidateLabel">
+                    <rect key="frame" x="16" y="102" width="382" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkR-Ni-b0q">
+                    <rect key="frame" x="16" y="136" width="382" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                    <connections>
+                        <action selector="buttonDonePressed:" destination="-1" eventType="touchUpInside" id="NLl-yO-3Cg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="P00-QI-MCu"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EkR-Ni-b0q" firstAttribute="trailing" secondItem="WB2-Vl-UxS" secondAttribute="trailing" id="4XR-jX-WZp"/>
+                <constraint firstItem="EkR-Ni-b0q" firstAttribute="leading" secondItem="WB2-Vl-UxS" secondAttribute="leading" id="FrR-Gn-CN3"/>
+                <constraint firstItem="xkF-l5-aCN" firstAttribute="trailing" secondItem="WB2-Vl-UxS" secondAttribute="trailing" id="d2q-Pa-YUt"/>
+                <constraint firstItem="xkF-l5-aCN" firstAttribute="leading" secondItem="WB2-Vl-UxS" secondAttribute="leading" id="hiR-5P-zot"/>
+                <constraint firstItem="WB2-Vl-UxS" firstAttribute="top" secondItem="P00-QI-MCu" secondAttribute="top" constant="16" id="nri-AF-RYh"/>
+                <constraint firstItem="WB2-Vl-UxS" firstAttribute="leading" secondItem="P00-QI-MCu" secondAttribute="leading" constant="16" id="sIl-4b-Hkf"/>
+                <constraint firstItem="EkR-Ni-b0q" firstAttribute="top" secondItem="xkF-l5-aCN" secondAttribute="bottom" constant="16" id="wNx-Ln-5YC"/>
+                <constraint firstItem="xkF-l5-aCN" firstAttribute="top" secondItem="WB2-Vl-UxS" secondAttribute="bottom" constant="8" id="wpm-QN-r2y"/>
+                <constraint firstItem="P00-QI-MCu" firstAttribute="trailing" secondItem="WB2-Vl-UxS" secondAttribute="trailing" constant="16" id="xu4-Ek-PJR"/>
+            </constraints>
+            <point key="canvasLocation" x="388" y="-609"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
