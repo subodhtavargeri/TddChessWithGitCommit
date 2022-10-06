@@ -14,7 +14,8 @@ class PlayerGamePresenterTests: XCTest {
     
     func testLoadPresenter() {
       let view = GameTimerViewControllerSpy()
-      let gameTimer = GameTimerView()
+      let gameTimer = GameTimerTestsSpy()
+      let router = GameTimerRouterSpy()
       let sut = GameTimerPresenter(view: <#T##GameTimerView#>, gameTimer: <#T##GameTimerProtocol#>, router: <#T##GameTimerRouterProtocol#>)
     }
 }
