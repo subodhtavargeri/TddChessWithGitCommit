@@ -30,7 +30,20 @@ class PlayerGamePresenterTests: XCTestCase {
     func testValidWithValidTimeRouterProtocolIsCalled() {
         sut?.validateTime(time: "2")
         
-       // XCTAssertTrue(router.invokedRouteToPlayerTimer)
+        // XCTAssertTrue(router.invokedRouteToPlayerTimer)
+    }
+    
+    func testValidWithInValidTimeErrorMessgaeIsShown() {
+        sut?.validateTime(time: "AXZ")
+        
+        XCTAssertFalse(view.invokedHideErrorMessage)
+    }
+    
+    func testValidWithInValidTimeCheckErrorMessage() {
+        sut?.validateTime(time: "AXZ")
+        
+        let expectation = "Please enter time in minutes"
+        XCTAssertEqual(view.invokedShowErrorMessageParametersList[0].message, expectation)
     }
 }
 
