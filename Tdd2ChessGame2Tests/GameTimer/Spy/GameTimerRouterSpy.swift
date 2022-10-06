@@ -6,10 +6,9 @@
 //
 
 import Foundation
-
 @testable import Tdd2ChessGame2
 
-class GameTimerViewControllerSpy: GameTimerRouterProtocol {
+class GameTimerRouterSpy: GameTimerRouterProtocol {
 
     var invokedRouteToPlayerTimer = false
     var invokedRouteToPlayerTimerCount = 0

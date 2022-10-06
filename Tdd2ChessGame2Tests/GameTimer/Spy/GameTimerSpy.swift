@@ -7,7 +7,7 @@
 
 import Foundation
 @testable import Tdd2ChessGame2
-class GameTimerTestSpy: GameTimerProtocol {
+class GameTimertSpy: GameTimerProtocol {
 
     var invokedValidateTime = false
     var invokedValidateTimeCount = 0
