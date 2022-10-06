@@ -8,37 +8,37 @@
 import Foundation
 @testable import Tdd2ChessGame2
 
-class GameTimerViewControllerSpy: GameTimerViewControllerDisplayLogic {
+class GameTimerViewControllerSpy: GameTimerView {
 
-    var invokedSetControllerTitle = false
-    var invokedSetControllerTitleCount = 0
-    var invokedSetControllerTitleParameters: (title: String, Void)?
-    var invokedSetControllerTitleParametersList = [(title: String, Void)]()
+    var invokedSetViewTitle = false
+    var invokedSetViewTitleCount = 0
+    var invokedSetViewTitleParameters: (title: String, Void)?
+    var invokedSetViewTitleParametersList = [(title: String, Void)]()
 
-    func setControllerTitle(title: String) {
-        invokedSetControllerTitle = true
-        invokedSetControllerTitleCount += 1
-        invokedSetControllerTitleParameters = (title, ())
-        invokedSetControllerTitleParametersList.append((title, ()))
+    func setViewTitle(title: String) {
+        invokedSetViewTitle = true
+        invokedSetViewTitleCount += 1
+        invokedSetViewTitleParameters = (title, ())
+        invokedSetViewTitleParametersList.append((title, ()))
     }
 
-    var invokedRouteToPlayerTimer = false
-    var invokedRouteToPlayerTimerCount = 0
+    var invokedHideErrorMessage = false
+    var invokedHideErrorMessageCount = 0
 
-    func routeToPlayerTimer() {
-        invokedRouteToPlayerTimer = true
-        invokedRouteToPlayerTimerCount += 1
+    func hideErrorMessage() {
+        invokedHideErrorMessage = true
+        invokedHideErrorMessageCount += 1
     }
 
-    var invokedInvalidTimeEntered = false
-    var invokedInvalidTimeEnteredCount = 0
-    var invokedInvalidTimeEnteredParameters: (message: String, Void)?
-    var invokedInvalidTimeEnteredParametersList = [(message: String, Void)]()
+    var invokedShowErrorMessage = false
+    var invokedShowErrorMessageCount = 0
+    var invokedShowErrorMessageParameters: (message: String, Void)?
+    var invokedShowErrorMessageParametersList = [(message: String, Void)]()
 
-    func invalidTimeEntered(message: String) {
-        invokedInvalidTimeEntered = true
-        invokedInvalidTimeEnteredCount += 1
-        invokedInvalidTimeEnteredParameters = (message, ())
-        invokedInvalidTimeEnteredParametersList.append((message, ()))
+    func showErrorMessage(message: String) {
+        invokedShowErrorMessage = true
+        invokedShowErrorMessageCount += 1
+        invokedShowErrorMessageParameters = (message, ())
+        invokedShowErrorMessageParametersList.append((message, ()))
     }
 }

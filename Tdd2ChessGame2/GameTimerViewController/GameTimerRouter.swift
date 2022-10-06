@@ -1,9 +1,3 @@
-//
-//  GameTimerRouter.swift
-//  Tdd2ChessGame2
-//
-//  Created by Subodh Tavargeri on 05/10/22.
-//
 
 import Foundation
 
@@ -16,4 +10,5 @@ class GameTimerRouter : GameTimerRouterProtocol {
         let playerTimerController = PlayerTimerFactory.create()
         controller.navigationController?.pushViewController(playerTimerController, animated: true)
     }
+    
 }

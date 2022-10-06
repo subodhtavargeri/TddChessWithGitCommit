@@ -7,10 +7,10 @@
 
 import UIKit
 
-protocol GameTimerViewControllerDisplayLogic: AnyObject {
-    func setControllerTitle(title: String)
-    func routeToPlayerTimer()
-    func invalidTimeEntered(message: String)
+protocol GameTimerView: AnyObject {
+    func setViewTitle(title: String)
+    func hideErrorMessage()
+    func showErrorMessage(message: String)
 }
 
 class GameTimerViewController: UIViewController {
@@ -18,42 +18,39 @@ class GameTimerViewController: UIViewController {
     @IBOutlet weak var labelErrorMessage: UILabel!
     @IBOutlet weak var textFieldGameTimer: UITextField!
     
+    private var blankString = ""
     private var presenter: GameTimerPresenter?
-    private var router: GameTimerRouter?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpInitialValue()
     }
     
-    func setup(presenter: GameTimerPresenter,
-               router: GameTimerRouter) {
+    func setup(presenter: GameTimerPresenter) {
         self.presenter = presenter
-        self.router = router
     }
     
     private func setUpInitialValue() {
-        self.presenter?.setTitle()
+        self.presenter?.load()
     }
     
     @IBAction func buttonDonePressed(_ sender: Any) {
-        presenter?.validateTime(time: textFieldGameTimer.text ?? "")
+        presenter?.validateTime(time: textFieldGameTimer.text ?? blankString)
     }
     
 }
 
-extension GameTimerViewController: GameTimerViewControllerDisplayLogic {
-    func routeToPlayerTimer() {
+extension GameTimerViewController: GameTimerView {
+    func hideErrorMessage() {
         labelErrorMessage.isHidden = true
-        router?.routeToPlayerTimer(controller: self)
     }
     
-    func setControllerTitle(title: String) {
+    func setViewTitle(title: String) {
         self.title = title
     }
     
-    func invalidTimeEntered(message: String) {
+    func showErrorMessage(message: String) {
         labelErrorMessage.text = message
         labelErrorMessage.isHidden = false
     }
@@ -61,7 +58,6 @@ extension GameTimerViewController: GameTimerViewControllerDisplayLogic {
 
 extension GameTimerViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        presenter?.validateTime(time: textField.text ?? "")
+        presenter?.validateTime(time: textField.text ?? blankString)
     }
-    
 }

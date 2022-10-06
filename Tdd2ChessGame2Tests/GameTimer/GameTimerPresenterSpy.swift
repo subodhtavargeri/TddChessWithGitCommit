@@ -13,7 +13,7 @@ class GameTimerPresenterSpy: GameTimerPresenterProtocol {
     var invokedSetTitle = false
     var invokedSetTitleCount = 0
     
-    func setTitle() {
+    func load() {
         invokedSetTitle = true
         invokedSetTitleCount += 1
     }
