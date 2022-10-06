@@ -4,12 +4,20 @@ import Foundation
 import XCTest
 
 class PlayerGamePresenterTests: XCTestCase {
+    let view = GameTimerViewControllerSpy()
+    let gameTimer = GameTimertSpy()
+    let router = GameTimerRouterSpy()
+    var sut:GameTimerPresenter?
     
-    func testLoadPresenter() {
-        let view = GameTimerViewControllerSpy()
-        let gameTimer = GameTimertSpy()
-        let router = GameTimerRouterSpy()
-        let sut = GameTimerPresenter(view: view, gameTimer: gameTimer, router: router)
+    override func setUp() async throws {
+        sut = GameTimerPresenter(view: view, gameTimer: gameTimer, router: router)
+    }
+    
+    func testLoadPresenterSetViewTitle() {
+        sut?.load()
+        
+        let expectationTitle = "Chess Timer"
+        XCTAssertEqual(view.invokedSetViewTitleParametersList[0].title, expectationTitle)
     }
 }
 
