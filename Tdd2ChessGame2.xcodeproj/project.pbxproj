@@ -38,6 +38,7 @@
 		5B52AB4F28EEB8DF00098039 /* GameTimerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB4E28EEB8DF00098039 /* GameTimerSpy.swift */; };
 		5B52AB5228EEC70D00098039 /* GameTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB5128EEC70D00098039 /* GameTimerTests.swift */; };
 		5B52AB5428EED08300098039 /* GameTimerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB5328EED08300098039 /* GameTimerViewControllerTests.swift */; };
+		5B52AB5C28EF1C8B00098039 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5B52AB5B28EF1C8B00098039 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		5B52AB4E28EEB8DF00098039 /* GameTimerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerSpy.swift; sourceTree = "<group>"; };
 		5B52AB5128EEC70D00098039 /* GameTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerTests.swift; sourceTree = "<group>"; };
 		5B52AB5328EED08300098039 /* GameTimerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerViewControllerTests.swift; sourceTree = "<group>"; };
+		5B52AB5B28EF1C8B00098039 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				5B10ECA028EDB21D005C5F96 /* GameTimerPresenter.swift */,
 				5B10ECA228EDB5F9005C5F96 /* GameTimer.swift */,
 				5B10ECA428EDB743005C5F96 /* GameTimerFactory.swift */,
+				5B52AB5B28EF1C8B00098039 /* .gitignore */,
 				5B10ECAA28EDBD8B005C5F96 /* GameTimerViewController.xib */,
 				5B10ECA628EDB836005C5F96 /* GameTimerRouter.swift */,
 				235A3EB828EEF1D400DDE09B /* GameTimerRouterProtocol.swift */,
@@ -353,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B52AB5C28EF1C8B00098039 /* .gitignore in Resources */,
 				5B10ECAB28EDBD8B005C5F96 /* GameTimerViewController.xib in Resources */,
 				5B3D6DE728ED9BB3005EAEF8 /* LaunchScreen.storyboard in Resources */,
 				5B3D6DE428ED9BB3005EAEF8 /* Assets.xcassets in Resources */,
