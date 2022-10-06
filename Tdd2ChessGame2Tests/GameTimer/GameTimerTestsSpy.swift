@@ -7,3 +7,19 @@
 
 import Foundation
 
+class GameTimerTestsSpy: GameTimerProtocol {
+
+    var invokedValidateTime = false
+    var invokedValidateTimeCount = 0
+    var invokedValidateTimeParameters: (time: String, Void)?
+    var invokedValidateTimeParametersList = [(time: String, Void)]()
+    var stubbedValidateTimeResult: Bool! = false
+
+    func validateTime(time: String) -> Bool {
+        invokedValidateTime = true
+        invokedValidateTimeCount += 1
+        invokedValidateTimeParameters = (time, ())
+        invokedValidateTimeParametersList.append((time, ()))
+        return stubbedValidateTimeResult
+    }
+}
