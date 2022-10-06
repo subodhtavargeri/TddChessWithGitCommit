@@ -19,5 +19,18 @@ class PlayerGamePresenterTests: XCTestCase {
         let expectationTitle = "Chess Timer"
         XCTAssertEqual(view.invokedSetViewTitleParametersList[0].title, expectationTitle)
     }
+    
+    func testValidWithValidTimeErrorMessgaeIsHidden() {
+        sut?.validateTime(time: "2")
+        
+        XCTAssertTrue(view.invokedHideErrorMessage)
+    }
+    
+    //HowTotest router part Todo Ask
+    func testValidWithValidTimeRouterProtocolIsCalled() {
+        sut?.validateTime(time: "2")
+        
+       // XCTAssertTrue(router.invokedRouteToPlayerTimer)
+    }
 }
 
