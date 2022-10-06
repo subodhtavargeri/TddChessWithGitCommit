@@ -9,11 +9,11 @@ class GameTimerPresenter: GameTimerPresenterProtocol {
     
     private let gameTimer: GameTimerProtocol
     private weak var view: GameTimerView?
-    private let router: GameTimerRouterProtocol
+    private let router: RouterProtocol
     
     init(view: GameTimerView,
          gameTimer: GameTimerProtocol,
-         router: GameTimerRouterProtocol) {
+         router: RouterProtocol) {
         self.view = view
         self.gameTimer = gameTimer
         self.router = router
@@ -34,8 +34,6 @@ class GameTimerPresenter: GameTimerPresenterProtocol {
     
     private func successValidation() {
         view?.hideErrorMessage()
-        if let gameTimerView = view as? GameTimerViewController {
-            router.routeToPlayerTimer(controller: gameTimerView)
-        }
+        router.routeToPlayerTimer()
     }
 }

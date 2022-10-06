@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235A3EB928EEF1D400DDE09B /* GameTimerRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A3EB828EEF1D400DDE09B /* GameTimerRouterProtocol.swift */; };
 		5B10ECA128EDB21D005C5F96 /* GameTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10ECA028EDB21D005C5F96 /* GameTimerPresenter.swift */; };
 		5B10ECA328EDB5F9005C5F96 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10ECA228EDB5F9005C5F96 /* GameTimer.swift */; };
 		5B10ECA528EDB743005C5F96 /* GameTimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10ECA428EDB743005C5F96 /* GameTimerFactory.swift */; };
@@ -15,7 +16,6 @@
 		5B10ECAE28EDC0CB005C5F96 /* GameTimerViewController+UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10ECAD28EDC0CB005C5F96 /* GameTimerViewController+UITextFieldExtension.swift */; };
 		5B1515BC28EE81E600313B2B /* PlayerTimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1515BB28EE81E600313B2B /* PlayerTimerFactory.swift */; };
 		5B1515BE28EE822000313B2B /* PlayerTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1515BD28EE822000313B2B /* PlayerTimerViewController.swift */; };
-		5B1515C028EE824100313B2B /* PlayerTimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1515BF28EE824100313B2B /* PlayerTimerRouter.swift */; };
 		5B1515C228EE825300313B2B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1515C128EE825300313B2B /* Game.swift */; };
 		5B1515C428EE826300313B2B /* PlayerTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1515C328EE826300313B2B /* PlayerTimerPresenter.swift */; };
 		5B1515C628EE836700313B2B /* PlayerTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1515C528EE836700313B2B /* PlayerTimerViewController.xib */; };
@@ -37,6 +37,7 @@
 		5B52AB4D28EE9F7C00098039 /* GameTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB4C28EE9F7C00098039 /* GameTimerPresenterTests.swift */; };
 		5B52AB4F28EEB8DF00098039 /* GameTimerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB4E28EEB8DF00098039 /* GameTimerSpy.swift */; };
 		5B52AB5228EEC70D00098039 /* GameTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB5128EEC70D00098039 /* GameTimerTests.swift */; };
+		5B52AB5428EED08300098039 /* GameTimerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52AB5328EED08300098039 /* GameTimerViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		235A3EB828EEF1D400DDE09B /* GameTimerRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerRouterProtocol.swift; sourceTree = "<group>"; };
 		5B10ECA028EDB21D005C5F96 /* GameTimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerPresenter.swift; sourceTree = "<group>"; };
 		5B10ECA228EDB5F9005C5F96 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		5B10ECA428EDB743005C5F96 /* GameTimerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerFactory.swift; sourceTree = "<group>"; };
@@ -65,7 +67,6 @@
 		5B10ECAD28EDC0CB005C5F96 /* GameTimerViewController+UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameTimerViewController+UITextFieldExtension.swift"; sourceTree = "<group>"; };
 		5B1515BB28EE81E600313B2B /* PlayerTimerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTimerFactory.swift; sourceTree = "<group>"; };
 		5B1515BD28EE822000313B2B /* PlayerTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTimerViewController.swift; sourceTree = "<group>"; };
-		5B1515BF28EE824100313B2B /* PlayerTimerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTimerRouter.swift; sourceTree = "<group>"; };
 		5B1515C128EE825300313B2B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5B1515C328EE826300313B2B /* PlayerTimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTimerPresenter.swift; sourceTree = "<group>"; };
 		5B1515C528EE836700313B2B /* PlayerTimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTimerViewController.xib; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		5B52AB4C28EE9F7C00098039 /* GameTimerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerPresenterTests.swift; sourceTree = "<group>"; };
 		5B52AB4E28EEB8DF00098039 /* GameTimerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerSpy.swift; sourceTree = "<group>"; };
 		5B52AB5128EEC70D00098039 /* GameTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerTests.swift; sourceTree = "<group>"; };
+		5B52AB5328EED08300098039 /* GameTimerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				5B10ECA428EDB743005C5F96 /* GameTimerFactory.swift */,
 				5B10ECAA28EDBD8B005C5F96 /* GameTimerViewController.xib */,
 				5B10ECA628EDB836005C5F96 /* GameTimerRouter.swift */,
+				235A3EB828EEF1D400DDE09B /* GameTimerRouterProtocol.swift */,
 			);
 			path = GameTimerViewController;
 			sourceTree = "<group>";
@@ -145,7 +148,6 @@
 			children = (
 				5B1515BB28EE81E600313B2B /* PlayerTimerFactory.swift */,
 				5B1515BD28EE822000313B2B /* PlayerTimerViewController.swift */,
-				5B1515BF28EE824100313B2B /* PlayerTimerRouter.swift */,
 				5B1515C128EE825300313B2B /* Game.swift */,
 				5B1515C328EE826300313B2B /* PlayerTimerPresenter.swift */,
 				5B1515C528EE836700313B2B /* PlayerTimerViewController.xib */,
@@ -158,6 +160,7 @@
 			children = (
 				5B52AB5028EEBA0A00098039 /* Spy */,
 				5B52AB4C28EE9F7C00098039 /* GameTimerPresenterTests.swift */,
+				5B52AB5328EED08300098039 /* GameTimerViewControllerTests.swift */,
 				5B52AB5128EEC70D00098039 /* GameTimerTests.swift */,
 			);
 			path = GameTimer;
@@ -384,8 +387,8 @@
 				5B10ECA328EDB5F9005C5F96 /* GameTimer.swift in Sources */,
 				5B3D6E0E28ED9C17005EAEF8 /* String+Extension.swift in Sources */,
 				5B3D6DDF28ED9BB2005EAEF8 /* GameTimerViewController.swift in Sources */,
+				235A3EB928EEF1D400DDE09B /* GameTimerRouterProtocol.swift in Sources */,
 				5B10ECA728EDB836005C5F96 /* GameTimerRouter.swift in Sources */,
-				5B1515C028EE824100313B2B /* PlayerTimerRouter.swift in Sources */,
 				5B10ECA128EDB21D005C5F96 /* GameTimerPresenter.swift in Sources */,
 				5B1515BE28EE822000313B2B /* PlayerTimerViewController.swift in Sources */,
 				5B1515C228EE825300313B2B /* Game.swift in Sources */,
@@ -402,6 +405,7 @@
 			files = (
 				5B3D6E1128ED9D9A005EAEF8 /* PlayerGamePresenterTests-TDD.swift in Sources */,
 				5B52AB4D28EE9F7C00098039 /* GameTimerPresenterTests.swift in Sources */,
+				5B52AB5428EED08300098039 /* GameTimerViewControllerTests.swift in Sources */,
 				5B52AB4B28EE884F00098039 /* GameTimerRouterSpy.swift in Sources */,
 				5B1515C928EE85A900313B2B /* GameTimerPresenterSpy.swift in Sources */,
 				5B52AB4928EE87AD00098039 /* GameTimerViewControllerSpy.swift in Sources */,

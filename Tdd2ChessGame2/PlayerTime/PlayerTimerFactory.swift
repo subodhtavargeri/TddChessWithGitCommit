@@ -8,12 +8,11 @@
 import Foundation
 
 struct  PlayerTimerFactory {
-    static func create() -> PlayerTimerViewController {
-        let router = PlayerTimerRouter()
+    static func create(router: RouterProtocol) -> PlayerTimerViewController {
         let game = Game()
-        let controller = PlayerTimerViewController()
-        let presenter = PlayerTimerPresenter.init(controller: controller, game: game)
-        controller.setup(presenter: presenter, router: router)
-        return controller
+        let view = PlayerTimerViewController()
+        let presenter = PlayerTimerPresenter.init(controller: view, game: game)
+        view.setup(presenter: presenter)
+        return view
     }
 }

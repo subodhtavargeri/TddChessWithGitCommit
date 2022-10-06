@@ -1,9 +1,9 @@
 
 import Foundation
+import UIKit
 
-struct  GameTimerFactory {
-    static func create() -> GameTimerViewController {
-        let router = GameTimerRouter()
+struct GameTimerFactory {
+    static func create(router: Router) -> GameTimerViewController {
         let gameTimer = GameTimer()
         let view = GameTimerViewController()
         let presenter = GameTimerPresenter.init(view: view, gameTimer: gameTimer, router: router)

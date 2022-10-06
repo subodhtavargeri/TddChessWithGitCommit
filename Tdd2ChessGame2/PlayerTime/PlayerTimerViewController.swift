@@ -10,8 +10,7 @@ import UIKit
 
 class PlayerTimerViewController: UIViewController {
     
-    func setup(presenter: PlayerTimerPresenter,
-               router: PlayerTimerRouter) {
+    func setup(presenter: PlayerTimerPresenter) {
         
     }
     

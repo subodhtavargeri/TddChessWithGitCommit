@@ -9,11 +9,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        let controller = GameTimerFactory.create()
-        let navigationController = UINavigationController.init(rootViewController: controller)
+        let navigationController = UINavigationController()
         self.window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        let router = Router(navigationController: navigationController)
+        router.routeToGameTimer()
     }
-
 }
-

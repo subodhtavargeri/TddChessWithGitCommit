@@ -19,7 +19,7 @@ class GameTimerViewController: UIViewController {
     @IBOutlet weak var textFieldGameTimer: UITextField!
     
     private var blankString = ""
-    private var presenter: GameTimerPresenter?
+    private var presenter: GameTimerPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class GameTimerViewController: UIViewController {
         setUpInitialValue()
     }
     
-    func setup(presenter: GameTimerPresenter) {
+    func setup(presenter: GameTimerPresenterProtocol) {
         self.presenter = presenter
     }
     

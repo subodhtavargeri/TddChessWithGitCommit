@@ -1,14 +1,23 @@
-
 import Foundation
+import UIKit
 
-protocol GameTimerRouterProtocol {
-    func routeToPlayerTimer(controller: GameTimerViewController)
-}
-class GameTimerRouter : GameTimerRouterProtocol {
+class Router: RouterProtocol {
     
-    func routeToPlayerTimer(controller: GameTimerViewController) {
-        let playerTimerController = PlayerTimerFactory.create()
-        controller.navigationController?.pushViewController(playerTimerController, animated: true)
+    private let navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
+    func routeToGameTimer() {
+        let controller = GameTimerFactory.create(router: self)
+        
+        navigationController.setViewControllers([controller], animated: false)
+    }
+    
+    func routeToPlayerTimer() {
+        let playerTimerController = PlayerTimerFactory.create(router: self)
+        
+        navigationController.pushViewController(playerTimerController, animated: true)
+    }
 }

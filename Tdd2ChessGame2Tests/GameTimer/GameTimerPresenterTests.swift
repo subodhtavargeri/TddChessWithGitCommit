@@ -27,7 +27,7 @@ class PlayerGamePresenterTests: XCTestCase {
     }
     
     //HowTotest router part Todo Ask
-    func testValidWithValidTimeRouterProtocolIsCalled() {
+    func testRouteToGameTimerScreenWithValidTime() {
         sut?.validateTime(time: "2")
         
         // XCTAssertTrue(router.invokedRouteToPlayerTimer)
