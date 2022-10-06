@@ -19,4 +19,20 @@ class GameTimerTests: XCTestCase {
         XCTAssertTrue(valid)
     }
     
+    func testValideTimeWithInValidTimerWithAlphabet() {
+        let gameTimer = GameTimer()
+        
+        let valid = gameTimer.validateTime(time: "XYZ")
+        
+        XCTAssertFalse(valid)
+    }
+    
+    func testValideTimeWithInValidTimerWithDoubleValue() {
+        let gameTimer = GameTimer()
+        
+        let valid = gameTimer.validateTime(time: "2.2")
+        
+        XCTAssertFalse(valid)
+    }
+    
 }
