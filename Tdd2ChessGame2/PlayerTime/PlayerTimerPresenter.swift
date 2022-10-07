@@ -1,9 +1,10 @@
 
 import Foundation
 
-protocol PlayerTimerPresenterProtocol {
+protocol PlayerTimerPresenterProtocol:AnyObject {
     func loadPresenter()
     func startGame()
+    func getPlayerOneTime(playerOneTime: Int)
 }
 class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
@@ -26,6 +27,10 @@ class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
     func startGame() {
         game?.gameStart(gameTime: 120)
+    }
+    
+    func getPlayerOneTime(playerOneTime: Int) {
+        controller?.setPlayerOneTimer(time: "\(playerOneTime)")
     }
     
 }

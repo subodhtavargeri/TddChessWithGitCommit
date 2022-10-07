@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerTimerViewController" customModule="Tdd2ChessGame2" customModuleProvider="target">
             <connections>
+                <outlet property="labelPlayerOneTimer" destination="Bxa-wk-N36" id="EhQ-6U-jo5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="BBQ-Or-0UE"/>
             </connections>
         </placeholder>
@@ -23,9 +24,19 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIM-sa-0jT" userLabel="PlayerOne">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player One:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxa-wk-N36" userLabel="PlayerOneTime">
+                                    <rect key="frame" x="140.5" y="85" width="133" height="30"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBrownColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="200" id="4fb-4d-oEi"/>
+                                <constraint firstItem="Bxa-wk-N36" firstAttribute="centerX" secondItem="IIM-sa-0jT" secondAttribute="centerX" id="Lxj-i6-SIu"/>
+                                <constraint firstItem="Bxa-wk-N36" firstAttribute="centerY" secondItem="IIM-sa-0jT" secondAttribute="centerY" id="MQO-aH-jBz"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GW-5Z-1ZJ" userLabel="SettinView">

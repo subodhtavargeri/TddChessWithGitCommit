@@ -4,10 +4,12 @@ import UIKit
 
 protocol PlayerTimerViewProtocol: AnyObject {
     func setTitle(title: String)
+    func setPlayerOneTimer(time: String)
 }
 class PlayerTimerViewController: UIViewController {
     private var presenter: PlayerTimerPresenter?
     
+    @IBOutlet weak var labelPlayerOneTimer: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.loadPresenter()
@@ -28,4 +30,7 @@ extension PlayerTimerViewController: PlayerTimerViewProtocol {
         self.title = title
     }
     
+    func setPlayerOneTimer(time: String) {
+        labelPlayerOneTimer.text = time
+    }
 }
