@@ -2,11 +2,11 @@
 import Foundation
 
 protocol PlayerTimerPresenterProtocol {
-    
+    func loadPresenter()
 }
 class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
-    let controller: PlayerTimerViewProtocol?
+    weak var controller: PlayerTimerViewProtocol?
     let game: GameProtocol?
     
     init(controller: PlayerTimerViewProtocol,
@@ -14,4 +14,13 @@ class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
         self.controller = controller
         self.game = game
     }
+    
+    func loadPresenter() {
+        setViewTitle()
+    }
+    
+    private func setViewTitle() {
+        self.controller?.setTitle(title: "Player Timer")
+    }
+    
 }
