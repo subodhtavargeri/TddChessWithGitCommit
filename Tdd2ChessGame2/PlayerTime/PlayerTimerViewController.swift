@@ -7,15 +7,16 @@ protocol PlayerTimerViewProtocol: AnyObject {
     func setPlayerOneTimer(time: String)
 }
 class PlayerTimerViewController: UIViewController {
-    private var presenter: PlayerTimerPresenter?
-    
+    private var presenter: PlayerTimerPresenterProtocol?
+
     @IBOutlet weak var labelPlayerOneTimer: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.loadPresenter()
     }
     
-    func setup(presenter: PlayerTimerPresenter) {
+    func setup(presenter: PlayerTimerPresenterProtocol) {
         self.presenter = presenter
     }
     

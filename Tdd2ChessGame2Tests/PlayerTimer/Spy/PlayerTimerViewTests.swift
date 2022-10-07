@@ -11,11 +11,27 @@ import XCTest
 
 class PlayerTimerViewControllerTests: XCTestCase {
     
+    let sut = PlayerTimerViewController()
+    let presenter = PlayerTimerPresenterSpy()
+    
+    override func setUp(){
+        _ = sut.view
+        sut.setup(presenter: presenter)
+    }
+    
     func testViewTitle() {
-        let sut = GameTimerViewController()
-        sut.setViewTitle(title: "Player Timer")
+        sut.setTitle(title: "Player Timer")
         
         let expecation = "Player Timer"
         XCTAssertEqual(sut.title, expecation)
+    }
+    
+    
+    func testPlayerOneTimerIsVisible() {
+        sut.setPlayerOneTimer(time: "2")
+        
+        let expecation = "2"
+        XCTAssertEqual(sut.labelPlayerOneTimer.text, expecation)
+        
     }
 }
