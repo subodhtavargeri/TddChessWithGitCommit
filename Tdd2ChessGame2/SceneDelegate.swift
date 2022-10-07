@@ -11,9 +11,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigationController = UINavigationController()
         self.window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
         
         let router = Router(navigationController: navigationController)
         router.routeToGameTimer()
+        window?.makeKeyAndVisible()
     }
 }

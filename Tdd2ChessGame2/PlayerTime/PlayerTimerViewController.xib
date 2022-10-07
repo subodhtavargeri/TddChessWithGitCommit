@@ -77,16 +77,28 @@
                             <rect key="frame" x="0.0" y="400" width="414" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcZ-8x-Yrd">
-                                    <rect key="frame" x="140.5" y="89" width="133" height="20.5"/>
+                                    <rect key="frame" x="140.5" y="90" width="133" height="20.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-Od-ZcE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="buttonPlayerTwoPressed:" destination="-1" eventType="touchUpInside" id="lc2-vJ-jxZ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="QBb-Od-ZcE" secondAttribute="bottom" id="7z2-be-uIA"/>
+                                <constraint firstItem="QBb-Od-ZcE" firstAttribute="leading" secondItem="WTV-uA-vKW" secondAttribute="leading" id="BuK-qU-Hoa"/>
+                                <constraint firstItem="AcZ-8x-Yrd" firstAttribute="centerY" secondItem="WTV-uA-vKW" secondAttribute="centerY" id="Tw1-ex-cAz"/>
+                                <constraint firstItem="QBb-Od-ZcE" firstAttribute="top" secondItem="WTV-uA-vKW" secondAttribute="top" id="Uu4-i0-VBG"/>
                                 <constraint firstAttribute="height" constant="200" id="WJq-uH-Bww"/>
-                                <constraint firstItem="AcZ-8x-Yrd" firstAttribute="top" secondItem="WTV-uA-vKW" secondAttribute="top" constant="89" id="lR5-C7-YEK"/>
+                                <constraint firstAttribute="trailing" secondItem="QBb-Od-ZcE" secondAttribute="trailing" id="Y7q-jg-v0z"/>
                             </constraints>
                         </view>
                     </subviews>

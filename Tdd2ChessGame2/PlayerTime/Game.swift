@@ -5,6 +5,12 @@ protocol GameProtocol {
     func gameStart(gameTime: Int)
     func updatePlayerOneTimer()
     func stopPlayerOne()
+    func stopPlayerTwo()
+    func getCurrentPlayer() -> CurrentPlayer
+    func startPlayerTwo()
+    func playerOneResume()
+    func playerTwoResume()
+    
 }
 class Game: GameProtocol {
     
@@ -12,6 +18,7 @@ class Game: GameProtocol {
     var playerTwo: Player?
     var playerOneTimer: Timer?
     var playerTwoTimer: Timer?
+    var currentPlayer: CurrentPlayer?
     
     weak var presenter: PlayerTimerPresenterProtocol?
     
@@ -25,10 +32,36 @@ class Game: GameProtocol {
         
         guard playerOneTimer == nil else { return }
         playerOneTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlayerOneTimer), userInfo: nil, repeats: true)
+        currentPlayer = .playerOne
     }
     
+    func playerOneResume() {
+        playerOneTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlayerOneTimer), userInfo: nil, repeats: true)
+        currentPlayer = .playerOne
+    }
+    
+    func playerTwoResume() {
+        playerTwoTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlayerTwoTimer), userInfo: nil, repeats: true)
+        currentPlayer = .playerTwo
+    }
+    
+    
     @objc func updatePlayerOneTimer() {
-        presenter?.displayPlayerOneTimer(playerOneTimer: playerOne?.timeLeft ?? 0)
+        if let timer = playerOne?.timeLeft, timer >= 0 {
+            presenter?.displayPlayerOneTimer(playerOneTimer: timer)
+            return
+        }
+        stopPlayerOne()
+        stopPlayerTwo()
+    }
+    
+    @objc func updatePlayerTwoTimer() {
+        if let timer = playerTwo?.timeLeft, timer >= 0 {
+            presenter?.displayPlayerTwoTimer(playerTwoTimer: timer)
+            return
+        }
+        stopPlayerOne()
+        stopPlayerTwo()
     }
     
     func stopPlayerOne() {
@@ -37,6 +70,23 @@ class Game: GameProtocol {
         playerOne?.state = .stop
         playerOne?.isCurrentPlayer = false
         playerTwo?.isCurrentPlayer = true
+        currentPlayer = .playerTwo
     }
     
+    func stopPlayerTwo() {
+        playerTwoTimer?.invalidate()
+        playerTwoTimer = nil
+        playerTwo?.state = .stop
+        playerOne?.isCurrentPlayer = true
+        playerTwo?.isCurrentPlayer = false
+        currentPlayer = .playerOne
+    }
+    
+    func startPlayerTwo() {
+        playerTwoTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlayerTwoTimer), userInfo: nil, repeats: true)
+    }
+    
+    func getCurrentPlayer() -> CurrentPlayer {
+        return currentPlayer ?? .playerOne
+    }
 }

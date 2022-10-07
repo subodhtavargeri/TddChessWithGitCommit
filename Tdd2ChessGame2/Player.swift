@@ -21,3 +21,7 @@ struct Player {
         }
     }
 }
+
+enum CurrentPlayer {
+    case playerOne, playerTwo
+}

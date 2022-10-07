@@ -26,7 +26,7 @@ class PlayerTimerPresenterSpy: PlayerTimerPresenterProtocol {
         
     }
     
-    func stopPlayerOne() {
+    func accessPlayerOne() {
         
     }
     

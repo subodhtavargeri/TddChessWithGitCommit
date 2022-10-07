@@ -1,5 +1,4 @@
 
-import Foundation
 import UIKit
 
 protocol PlayerTimerViewProtocol: AnyObject {
@@ -27,9 +26,12 @@ class PlayerTimerViewController: UIViewController {
     }
     
     @IBAction func buttonPlayerOnePressed( _ sender: Any) {
-        presenter?.stopPlayerOne()
+        presenter?.accessPlayerOne()
     }
     
+    @IBAction func buttonPlayerTwoPressed(_ sender: Any) {
+        presenter?.accessPlayerTwo()
+    }
 }
 
 extension PlayerTimerViewController: PlayerTimerViewProtocol {
@@ -43,6 +45,6 @@ extension PlayerTimerViewController: PlayerTimerViewProtocol {
     }
     
     func setPlayerTwoTimer(time: String) {
-        labelPlayerOneTimer.text = time
+        labelPlayerTwoTimer.text = time
     }
 }
