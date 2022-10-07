@@ -1,16 +1,17 @@
-//
-//  PlayerTimerPresenter.swift
-//  Tdd2ChessGame2
-//
-//  Created by Subodh Tavargeri on 06/10/22.
-//
 
 import Foundation
 
-class PlayerTimerPresenter {
+protocol PlayerTimerPresenterProtocol {
     
-    init(controller: PlayerTimerViewController,
-         game: Game) {
+}
+class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
+    let controller: PlayerTimerViewProtocol?
+    let game: GameProtocol?
+    
+    init(controller: PlayerTimerViewProtocol,
+         game: GameProtocol) {
+        self.controller = controller
+        self.game = game
     }
 }

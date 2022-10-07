@@ -1,17 +1,24 @@
-//
-//  PlayerTimerViewController.swift
-//  Tdd2ChessGame2
-//
-//  Created by Subodh Tavargeri on 06/10/22.
-//
 
 import Foundation
 import UIKit
 
+protocol PlayerTimerViewProtocol {
+    
+}
 class PlayerTimerViewController: UIViewController {
+    private var presenter: PlayerTimerPresenter?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     func setup(presenter: PlayerTimerPresenter) {
         
     }
+    
+}
+
+extension PlayerTimerViewController: PlayerTimerViewProtocol {
     
 }
