@@ -4,7 +4,8 @@ import Foundation
 protocol PlayerTimerPresenterProtocol:AnyObject {
     func loadPresenter()
     func startGame()
-    func getPlayerOneTime(playerOneTime: Int)
+    func displayPlayerOneTimer(playerOneTimer: Int)
+    func displayPlayerTwoTimer(playerTwoTimer: Int)
     func stopPlayerOne()
 }
 class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
@@ -30,8 +31,12 @@ class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
         game?.gameStart(gameTime: 120)
     }
     
-    func getPlayerOneTime(playerOneTime: Int) {
-        controller?.setPlayerOneTimer(time: "\(playerOneTime)")
+    func displayPlayerOneTimer(playerOneTimer: Int) {
+        controller?.setPlayerOneTimer(time: "\(playerOneTimer)")
+    }
+    
+    func displayPlayerTwoTimer(playerTwoTimer: Int) {
+        controller?.setPlayerTwoTimer(time: "\(playerTwoTimer)")
     }
     
     func stopPlayerOne() {

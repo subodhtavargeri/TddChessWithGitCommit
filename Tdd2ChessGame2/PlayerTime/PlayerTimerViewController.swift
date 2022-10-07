@@ -5,11 +5,13 @@ import UIKit
 protocol PlayerTimerViewProtocol: AnyObject {
     func setTitle(title: String)
     func setPlayerOneTimer(time: String)
+    func setPlayerTwoTimer(time: String)
 }
 class PlayerTimerViewController: UIViewController {
     private var presenter: PlayerTimerPresenterProtocol?
-
+    
     @IBOutlet weak var labelPlayerOneTimer: UILabel!
+    @IBOutlet weak var labelPlayerTwoTimer: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class PlayerTimerViewController: UIViewController {
     @IBAction func buttonPlayerOnePressed( _ sender: Any) {
         presenter?.stopPlayerOne()
     }
-        
+    
 }
 
 extension PlayerTimerViewController: PlayerTimerViewProtocol {
@@ -37,6 +39,10 @@ extension PlayerTimerViewController: PlayerTimerViewProtocol {
     }
     
     func setPlayerOneTimer(time: String) {
+        labelPlayerOneTimer.text = time
+    }
+    
+    func setPlayerTwoTimer(time: String) {
         labelPlayerOneTimer.text = time
     }
 }

@@ -32,6 +32,5 @@ class PlayerTimerViewControllerTests: XCTestCase {
         
         let expecation = "2"
         XCTAssertEqual(sut.labelPlayerOneTimer.text, expecation)
-        
     }
 }

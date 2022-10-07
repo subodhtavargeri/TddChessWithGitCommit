@@ -26,5 +26,11 @@ class PlayerTimerPresenterTests: XCTestCase {
         XCTAssertEqual(game.gameTime, expectedTime)
     }
     
+    func testDisplayPlayerOneTimer() {
+        presenter?.displayPlayerOneTimer(playerOneTimer: 2)
+        
+        let expectedTime = 2
+        XCTAssertEqual(2, expectedTime)
+    }
     
 }

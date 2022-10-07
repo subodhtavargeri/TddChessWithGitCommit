@@ -9,6 +9,7 @@ import Foundation
 @testable import Tdd2ChessGame2
 
 class PlayerTimerPresenterSpy: PlayerTimerPresenterProtocol {
+    
     func loadPresenter() {
         
     }
@@ -17,7 +18,15 @@ class PlayerTimerPresenterSpy: PlayerTimerPresenterProtocol {
         
     }
     
-    func getPlayerOneTime(playerOneTime: Int) {
+    func displayPlayerOneTimer(playerOneTimer: Int) {
+        
+    }
+    
+    func displayPlayerTwoTimer(playerTwoTimer: Int) {
+        
+    }
+    
+    func stopPlayerOne() {
         
     }
     

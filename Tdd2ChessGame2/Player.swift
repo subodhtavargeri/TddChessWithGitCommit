@@ -13,6 +13,7 @@ enum PlayerState {
 struct Player {
     var state: PlayerState
     var totalTime: Int
+    var isCurrentPlayer: Bool
     var timeLeft: Int {
         mutating get {
             totalTime -= 1

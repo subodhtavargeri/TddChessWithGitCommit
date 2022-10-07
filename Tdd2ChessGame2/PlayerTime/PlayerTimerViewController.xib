@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerTimerViewController" customModule="Tdd2ChessGame2" customModuleProvider="target">
             <connections>
                 <outlet property="labelPlayerOneTimer" destination="Bxa-wk-N36" id="EhQ-6U-jo5"/>
+                <outlet property="labelPlayerTwoTimer" destination="AcZ-8x-Yrd" id="YHG-tl-veH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="BBQ-Or-0UE"/>
             </connections>
         </placeholder>
@@ -74,13 +75,24 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-uA-vKW" userLabel="PlayerTwo">
                             <rect key="frame" x="0.0" y="400" width="414" height="200"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcZ-8x-Yrd">
+                                    <rect key="frame" x="140.5" y="89" width="133" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="200" id="WJq-uH-Bww"/>
+                                <constraint firstItem="AcZ-8x-Yrd" firstAttribute="top" secondItem="WTV-uA-vKW" secondAttribute="top" constant="89" id="lR5-C7-YEK"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="AcZ-8x-Yrd" firstAttribute="leading" secondItem="Bxa-wk-N36" secondAttribute="leading" id="LVe-SR-lHo"/>
+                        <constraint firstItem="AcZ-8x-Yrd" firstAttribute="trailing" secondItem="Bxa-wk-N36" secondAttribute="trailing" id="Uxm-va-Jxx"/>
                         <constraint firstAttribute="bottom" secondItem="WTV-uA-vKW" secondAttribute="bottom" id="xWf-ay-kHX"/>
                     </constraints>
                 </stackView>
