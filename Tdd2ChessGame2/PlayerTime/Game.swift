@@ -2,18 +2,17 @@
 import Foundation
 
 protocol GameProtocol {
-    func gameStart()
+    func gameStart(gameTime: Int)
 }
 class Game: GameProtocol {
     
-    let totalTime = 120
     var playerOne: Player?
     var playerTwo: Player?
     
     var playerOneTimer = Timer()
-    func gameStart() {
-        playerOne = Player(state: .start, totalTime: totalTime)
-        playerTwo = Player(state: .stop, totalTime: totalTime)
+    func gameStart(gameTime: Int) {
+        playerOne = Player(state: .start, totalTime: gameTime)
+        playerTwo = Player(state: .stop, totalTime: gameTime)
         playerOneTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateGameDetails), userInfo: nil, repeats: true)
     }
     

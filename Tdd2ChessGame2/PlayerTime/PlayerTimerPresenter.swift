@@ -25,7 +25,7 @@ class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     }
     
     func startGame() {
-        game?.gameStart()
+        game?.gameStart(gameTime: 120)
     }
     
 }
