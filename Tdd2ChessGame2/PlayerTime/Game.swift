@@ -4,6 +4,7 @@ import Foundation
 protocol GameProtocol {
     func gameStart(gameTime: Int)
     func updateGameDetails()
+    func stopPlayerOne()
 }
 class Game: GameProtocol {
     
@@ -29,4 +30,9 @@ class Game: GameProtocol {
         presenter?.getPlayerOneTime(playerOneTime: playerOne?.timeLeft ?? 0)
     }
     
+    func stopPlayerOne() {
+        playerOneTimer?.invalidate()
+        playerOneTimer = nil
+        playerOne?.state = .stop
+    }
 }

@@ -5,6 +5,7 @@ protocol PlayerTimerPresenterProtocol:AnyObject {
     func loadPresenter()
     func startGame()
     func getPlayerOneTime(playerOneTime: Int)
+    func stopPlayerOne()
 }
 class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
@@ -31,6 +32,10 @@ class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
     func getPlayerOneTime(playerOneTime: Int) {
         controller?.setPlayerOneTimer(time: "\(playerOneTime)")
+    }
+    
+    func stopPlayerOne() {
+        game?.stopPlayerOne()
     }
     
 }

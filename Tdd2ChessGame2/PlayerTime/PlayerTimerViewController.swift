@@ -23,6 +23,11 @@ class PlayerTimerViewController: UIViewController {
     @IBAction func buttonStartPressed(_ sender: Any) {
         presenter?.startGame()
     }
+    
+    @IBAction func buttonPlayerOnePressed( _ sender: Any) {
+        presenter?.stopPlayerOne()
+    }
+        
 }
 
 extension PlayerTimerViewController: PlayerTimerViewProtocol {
