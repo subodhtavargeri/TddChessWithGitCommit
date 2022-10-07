@@ -3,6 +3,7 @@ import Foundation
 
 protocol PlayerTimerPresenterProtocol {
     func loadPresenter()
+    func startGame()
 }
 class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
@@ -21,6 +22,10 @@ class PlayerTimerPresenter: PlayerTimerPresenterProtocol {
     
     private func setViewTitle() {
         self.controller?.setTitle(title: "Player Timer")
+    }
+    
+    func startGame() {
+        game?.gameStart()
     }
     
 }

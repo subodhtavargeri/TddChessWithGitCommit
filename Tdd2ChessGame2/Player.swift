@@ -11,11 +11,11 @@ enum PlayerState {
     case start, stop, pause
 }
 struct Player {
-    let state: PlayerState
-    let remainingTime: Int
+    var state: PlayerState
+    var totalTime: Int
     var timeLeft: Int {
-        get {
-            return remainingTime - 1
+        mutating get {
+            return totalTime -= 1
         }
     }
 }
