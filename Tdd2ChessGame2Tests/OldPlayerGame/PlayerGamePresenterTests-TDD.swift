@@ -7,7 +7,7 @@
 
 import XCTest
 @testable import Tdd2ChessGame2
-
+/*
 class PlayerGamePresenterTestsTdd: XCTestCase {
     
     //assume i have time in sec
@@ -44,3 +44,5 @@ class PlayerGamePresenterTestsTdd: XCTestCase {
         
     }
 }
+ 
+*/

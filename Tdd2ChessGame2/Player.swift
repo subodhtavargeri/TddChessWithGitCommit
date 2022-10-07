@@ -15,7 +15,8 @@ struct Player {
     var totalTime: Int
     var timeLeft: Int {
         mutating get {
-            return totalTime -= 1
+            totalTime -= 1
+            return totalTime
         }
     }
 }

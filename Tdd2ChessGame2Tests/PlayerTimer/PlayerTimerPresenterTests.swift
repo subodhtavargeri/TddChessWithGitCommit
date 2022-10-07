@@ -4,14 +4,26 @@ import XCTest
 
 class PlayerTimerPresenterTests: XCTestCase {
     
+    let view = PlayerTimerViewControllerSpy()
+    let game = GameSpy()
+    var presenter: PlayerTimerPresenter?
+    
+    override func setUp() {
+        presenter = PlayerTimerPresenter(controller: view, game: game)
+    }
+    
     func testTitleSetForView() {
-        let view = PlayerTimerViewControllerSpy()
-        let game = GameSpy()
-        let presenter = PlayerTimerPresenter(controller: view, game: game)
-        presenter.loadPresenter()
+        presenter?.loadPresenter()
         
         let expectation = "Player Timer"
         XCTAssertEqual(view.title, expectation)
+    }
+    
+    func testStartGame() {
+        presenter?.startGame()
+        
+        let expectedTime = 120
+        XCTAssertEqual(game.gameTime, expectedTime)
     }
     
 }
